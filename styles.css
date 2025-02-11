@@ -24,23 +24,23 @@ body{
 
 .bubbles span{
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     background: rgb(0, 255, 229);
     margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px rgb(1, 55, 149),
-    0 0 50px rgb(0, 255, 255),
-    0 0 100px rgb(0, 255, 255);
+    border-radius: 100%;
+    box-shadow: 0 0 0 3px rgb(1, 55, 149),
+    0 0 5px rgb(0, 255, 255),
+    0 0 10px rgb(0, 255, 255);
     animation: animate 10s linear infinite;
     animation-duration: calc(125s / var(--i));
 }
 
 .bubbles span:nth-child(even){
     background: rgb(255, 0, 144);
-    box-shadow: 0 0 0 10px rgb(148, 1, 65),
-    0 0 50px rgb(255, 0, 149),
-    0 0 100px rgb(255, 0, 144);
+    box-shadow: 0 0 0 3px rgb(148, 1, 65),
+    0 0 5px rgb(255, 0, 149),
+    0 0 10px rgb(255, 0, 144);
 }
 
 @keyframes animate {
@@ -62,20 +62,20 @@ body{
 }
 
 .titulo{
-    font-size: 80px;
+    font-size: 30px;
     color: brown;
     text-align: center;
 }
 
 .imagen{
-    width: 600px;
-    padding: 50px 0 150px 0;
+    width: 180px;
+    padding: 10px 0 50px 0;
 }
 
 .boton_si, .boton_no{
-    padding: 20px 150px;
-    font-size: 80px;
-    margin: 0 50px;
+    padding: 10px 35px;
+    font-size: 20px;
+    margin: 0;
     border: none;
     color: white;
 }
@@ -95,5 +95,5 @@ body{
 }
 
 .cancion{
-    width: 80%;
+    width: 90%;
 }
