@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 191, 229);
+    min-height: 100vh;
+}
+
+.container{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: rgb(0, 255, 229);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(1, 55, 149),
+    0 0 50px rgb(0, 255, 255),
+    0 0 100px rgb(0, 255, 255);
+    animation: animate 10s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: rgb(255, 0, 144);
+    box-shadow: 0 0 0 10px rgb(148, 1, 65),
+    0 0 50px rgb(255, 0, 149),
+    0 0 100px rgb(255, 0, 144);
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(120vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo{
+    font-size: 80px;
+    color: brown;
+    text-align: center;
+}
+
+.imagen{
+    width: 600px;
+    padding: 50px 0 150px 0;
+}
+
+.boton_si, .boton_no{
+    padding: 20px 150px;
+    font-size: 80px;
+    margin: 0 50px;
+    border: none;
+    color: white;
+}
+
+.boton_si{
+    background-color: rgb(0, 255, 0);
+}
+.boton_no{
+    background-color: red;
+}
+
+.boton_si:active{
+    outline: 5px solid #115300;
+}
+.boton_no:active{
+    outline: 5px solid #4d0000;
+}
+
+.cancion{
+    width: 80%;
+}
